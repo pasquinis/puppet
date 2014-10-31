@@ -1,4 +1,5 @@
 puppet
 ======
 
-Used for made Demo example
+vagrant package needed:
+ - vagrant plugin install vagrant-cachier
