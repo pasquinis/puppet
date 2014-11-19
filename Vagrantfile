@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Default value: false
   # config.ssh.forward_agent = true
 
-  config.vm.synced_folder "./bridge", "/vagrant_bridge" , create: 'true'
+  config.vm.synced_folder "./bridge", "/mnt/bridge" , create: 'true'
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
