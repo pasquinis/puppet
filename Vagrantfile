@@ -40,11 +40,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize ["modifyvm", :id, "--memory", "1024"]
+    # virtualbox parameter CPU execution cap is 50%
+    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
 
     # Virtualbox display name
     vb.name = "puppet_standalone"
 
-  end
+ end
   #
   # View the documentation for the provider you're using for more
   # information on available options.
