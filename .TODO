@@ -2,4 +2,6 @@
 https://docs.puppetlabs.com/guides/install_puppet/pre_install.html
 
 # Vagrant
-https://docs.vagrantup.com/v2/getting-started/provisioning.html
+- https://docs.vagrantup.com/v2/getting-started/provisioning.html
+- https://docs.vagrantup.com/v2/multi-machine/index.html (for multiple machine in the same Vagrantfile)
+
