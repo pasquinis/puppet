@@ -1,3 +1,5 @@
+
+## Documentation
 # Puppet
 https://docs.puppetlabs.com/guides/install_puppet/pre_install.html
 https://docs.puppetlabs.com/guides/install_puppet/post_install.html
@@ -14,3 +16,8 @@ https://docs.puppetlabs.com/puppet_core_types_cheatsheet.pdf
 https://docs.vagrantup.com/v2/provisioning/puppet_apply.html
 
 - https://github.com/patrickdlee/vagrant-examples
+
+## Last to do
+https://docs.puppetlabs.com/puppet/latest/reference/environments_classic.html
+
+
