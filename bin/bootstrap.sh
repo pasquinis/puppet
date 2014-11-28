@@ -11,4 +11,10 @@ else
 fi
 
 #Fix environment
-sudo sh -c 'echo LC_ALL="en_US.UTF-8" >> /etc/environment'
+if [ $(cat /etc/environment | grep LC_ALL|wc -l) -eq 0 ];
+then
+    sudo sh -c 'echo LC_ALL="en_US.UTF-8" >> /etc/environment'
+fi
+
+#Useful for disable templatedir warning
+sed -i 's/^templatedir/#templatedir/' /etc/puppet/puppet.conf

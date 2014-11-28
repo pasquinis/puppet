@@ -29,6 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.ssh.forward_agent = true
 
   config.vm.synced_folder "./bridge", "/mnt/bridge" , create: 'true'
+  config.vm.synced_folder "./site/demo/templates", "/tmp/puppet/templates" , create: 'true'
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -68,9 +69,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # end
 
   config.vm.provision "puppet" do |puppet|
-    puppet.manifests_path = "manifests"
     puppet.manifest_file  = "site.pp"
+    puppet.module_path = [ "site", "modules" ]
     puppet.options = [
+      '--templatedir', '/tmp/puppet/templates',
       '--verbose',
       #'--debug'
     ]

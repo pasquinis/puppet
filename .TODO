@@ -17,7 +17,11 @@ https://docs.vagrantup.com/v2/provisioning/puppet_apply.html
 
 - https://github.com/patrickdlee/vagrant-examples
 
-## Last to do
-https://docs.puppetlabs.com/puppet/latest/reference/environments_classic.html
+## Directory Environments
 
+https://docs.puppetlabs.com/puppet/latest/reference/environments_classic.html
+https://docs.puppetlabs.com/puppet/latest/reference/environments.html
+https://docs.puppetlabs.com/puppet/latest/reference/environments_configuring.html
+https://docs.puppetlabs.com/puppet/latest/reference/environments_creating.html
+https://docs.puppetlabs.com/puppet/latest/reference/environments_assigning.html
 
