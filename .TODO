@@ -30,3 +30,6 @@ https://docs.puppetlabs.com/puppet/latest/reference/environments_assigning.html
 
 chapter 4
 
+## Generate SSH Key
+
+ssh-keygen -t rsa -C "art@demo"
