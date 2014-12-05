@@ -3,7 +3,8 @@ class demo::users {
     ensure      => present,
     comment     => 'Art Cart',
     home        => '/home/art',
-    managehome  => true
+    managehome  => true,
+    password    => '*'
   } ->
   ssh_authorized_key { 'art_ssh':
     user  => 'art',
