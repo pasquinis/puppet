@@ -1,0 +1,6 @@
+Port 22
+Protocol 2
+PermitRootLogin no
+PasswordAuthentication yes
+AllowUsers ubuntu vagrant art
+UsePAM yes
