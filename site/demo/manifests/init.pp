@@ -3,4 +3,5 @@ class demo {
   include demo::catsite
   include demo::users
   include demo::execution
+  include demo::ruby
 }

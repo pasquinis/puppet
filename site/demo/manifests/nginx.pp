@@ -11,7 +11,8 @@ class demo::nginx {
 
   service { 'nginx':
     ensure  => running,
-    enable => true,
+    enable  => true,
     require => Package['nginx']
   }
+
 }

@@ -4,7 +4,12 @@ File {
 }
 
 Exec {
-  path => [ '/bin' , '/usr/bin' ]
+  path => [
+    '/bin',
+    '/usr/bin',
+    '/sbin',
+    '/usr/local/rvm/bin'
+  ]
 }
 
 include demo
