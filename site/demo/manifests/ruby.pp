@@ -12,7 +12,8 @@ class demo::ruby {
     creates => '/usr/local/rvm'
   } ->
   exec { "install with RVM ruby version ${ruby_version}":
-    command => "rvm install ${ruby_version} 2>&1 > /dev/null",
-    onlyif  => "test $(rvm list|grep -c ruby-${ruby_version}) -eq 0"
+    command => "rvm install ${ruby_version} > /var/tmp/ruby-wrong 2>&1",
+    onlyif  => "test $(rvm list|grep -c ruby-${ruby_version}) -eq 0",
+    timeout => 1800
   }
 }
