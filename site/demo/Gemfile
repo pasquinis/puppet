@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+ruby '1.9.3'
+
+gem 'puppet', '3.7.3'
+gem 'rspec-puppet', '~> 1.0.1'
