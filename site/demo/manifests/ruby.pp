@@ -8,11 +8,11 @@ class demo::ruby {
   } ->
   exec { 'install RVM with bash':
     cwd     => '/usr/local',
-    command => '/usr/bin/curl -sSL https://get.rvm.io | bash -s stable ; mkdir -p /usr/local/rvm',
-    creates => '/usr/local/rvm'
+    command => '/usr/bin/curl -sSL https://get.rvm.io | bash -s stable',
+    creates => '/usr/local/rvm/bin/rvm'
   } ->
   exec { "install with RVM ruby version ${ruby_version}":
-    command => "/usr/local/rvm install ${ruby_version} > /var/tmp/ruby-wrong 2>&1",
+    command => "/usr/local/rvm/bin/rvm install ${ruby_version} > /var/tmp/ruby-wrong 2>&1",
     onlyif  => "/usr/bin/test $(rvm list|grep -c ruby-${ruby_version}) -eq 0",
     timeout => 1800
   }
