@@ -28,7 +28,10 @@ https://docs.puppetlabs.com/puppet/latest/reference/environments_assigning.html
 
 ## Last thing todo
 
-chapter 4
+chapter 6
+
+installing hiera:
+ - https://docs.puppetlabs.com/hiera/1/installing.html
 
 ## Generate SSH Key
 

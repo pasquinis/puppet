@@ -10,6 +10,9 @@ else
     echo Puppet already installed
 fi
 
+echo "Installing hiera"
+sudo puppet resource package hiera ensure=installed
+
 #Fix environment
 if [ $(cat /etc/environment | grep LC_ALL|wc -l) -eq 0 ];
 then
