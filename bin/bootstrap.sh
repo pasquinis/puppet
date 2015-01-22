@@ -11,8 +11,10 @@ else
 fi
 
 echo "Installing hiera"
-sudo puppet resource package hiera ensure=installed
+sudo puppet resource package hiera ensure=present
 
+echo "Installing hiera-eyaml"
+sudo puppet resource package hiera-eyaml provider=gem ensure=present
 #Fix environment
 if [ $(cat /etc/environment | grep LC_ALL|wc -l) -eq 0 ];
 then

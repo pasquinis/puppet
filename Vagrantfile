@@ -71,11 +71,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "puppet" do |puppet|
     puppet.manifest_file  = "site.pp"
+    puppet.hiera_config_path = "etc/hiera.eyaml"
     puppet.module_path = [ "site", "modules" ]
     puppet.options = [
       '--templatedir', '/tmp/puppet/templates',
       '--verbose',
-      '--debug'
+      #'--debug'
     ]
   end
 
