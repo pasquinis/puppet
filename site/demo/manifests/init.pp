@@ -4,4 +4,5 @@ class demo {
   include demo::users
   include demo::execution
   include demo::ruby
+  include demo::git
 }
