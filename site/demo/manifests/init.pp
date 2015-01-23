@@ -1,5 +1,9 @@
 class demo {
 
+  class { 'demo::ppa':
+    stage => ppa
+  }
+
   class { 'demo::apt':
     stage => apt
   }

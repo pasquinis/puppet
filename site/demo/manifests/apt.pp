@@ -1,3 +1,3 @@
 class demo::apt {
-  notify {'run before Stage[main]': }
+  notify {'demo::apt run before Stage[main]': }
 }
