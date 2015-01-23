@@ -76,6 +76,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.options = [
       '--templatedir', '/tmp/puppet/templates',
       '--verbose',
+      #'--graph',
       #'--debug'
     ]
   end
