@@ -1,7 +1,4 @@
 class demo::execution {
-  exec { 'I run always this exec':
-    command => 'echo I am starting `date` >> /tmp/output.always.txt'
-  }
 
   exec { 'I download this file only once':
     cwd     => '/tmp',
