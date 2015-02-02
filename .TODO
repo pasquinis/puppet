@@ -39,5 +39,5 @@ ssh-keygen -t rsa -C "art@demo"
 
 
 ## TODO LIST
-fix version for puppet, hiera , hiera eyaml
+X - fix version for puppet, hiera , hiera eyaml
 X - PHP 5.6
