@@ -30,6 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.synced_folder "./bridge", "/mnt/bridge" , create: 'true'
   config.vm.synced_folder "./site/demo/templates", "/tmp/puppet/templates" , create: 'true'
+  config.vm.synced_folder "./site/demo/lib/facter", "/var/lib/puppet/lib/facter", create: 'true'
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -76,6 +77,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.options = [
       '--templatedir', '/tmp/puppet/templates',
       '--verbose',
+      '--show_diff',
       #'--graph',
       #'--debug'
     ]

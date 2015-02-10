@@ -12,7 +12,7 @@ class demo {
   #include demo::catsite
   include demo::users
   include demo::execution
-  include demo::ruby
-  include demo::php
-  include demo::git
+  ##include demo::ruby
+  ##include demo::php
+  ##include demo::git
 }
