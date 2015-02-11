@@ -8,11 +8,17 @@ class demo {
     stage => apt
   }
 
+  if $::env {
+    #include "demo::${::env}"
+  }
+
+  if $::role {
+    include "demo::role::${::role}"
+  }
+
   #include demo::nginx
   #include demo::catsite
   include demo::users
   include demo::execution
-  ##include demo::ruby
-  ##include demo::php
   ##include demo::git
 }
