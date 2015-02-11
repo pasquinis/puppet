@@ -9,7 +9,7 @@ class demo {
   }
 
   if $::env {
-    #include "demo::${::env}"
+    include "demo::env::${::env}"
   }
 
   if $::role {
@@ -20,5 +20,4 @@ class demo {
   #include demo::catsite
   include demo::users
   include demo::execution
-  ##include demo::git
 }
