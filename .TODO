@@ -42,3 +42,4 @@ ssh-keygen -t rsa -C "art@demo"
 X - fix version for puppet, hiera , hiera eyaml
 X - PHP 5.6
 X - change the vagrant instance host name for use role eyaml
+- vb.name is custom, possible problem for multiple instance
