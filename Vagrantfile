@@ -38,9 +38,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.cpus = instance_cfg[:cpus]
       # virtualbox parameter CPU execution cap is 50%
       #vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
-
-      # Virtualbox display name
-      #vb.name = "instance_name"
     end
   end
 
