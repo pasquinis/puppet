@@ -19,6 +19,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       :os         => 'ubuntu/precise64',
       :hostname   => "dev-php.demo.com",
       :ip         => "192.168.33.10",
+      :memory     => "4096",
+      :cpus       => 2
     }
   }.each do |instance_name, instance_cfg|
     config.vm.define instance_name do |instance|
@@ -32,8 +34,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.gui = false
 
       # Use VBoxManage to customize the VM. For example to change memory:
-      vb.customize ["modifyvm", :id, "--memory", "4096"]
-      vb.cpus = 2
+      vb.customize ["modifyvm", :id, "--memory", instance_cfg[:memory]]
+      vb.cpus = instance_cfg[:cpus]
       # virtualbox parameter CPU execution cap is 50%
       #vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
 
