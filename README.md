@@ -1,20 +1,35 @@
-puppet
+Vagrant puppet
 ======
+
+My vagrant for made Kata in several languages, now is only PHP and Ruby.
+The first goal was to made a Kata for develop knowledge to puppet provisioner and to have an instance for develop Kata.
+
+Setup:
+---
 
 Requirements:
  - Vagrant >= 1.6.5
- - Virtualbox last version
+ - Virtualbox latest version
 
-plugin needed:
+Plugin needed:
  - vagrant plugin install vagrant-cachier
  
-Instance List:
+Running:
+---
 
- - dev-php: instance for develop with:
-  - php 5.6.5
-  - apache 2.4
+Now there is only one instance, dev-php
+For use it:
+```
+vagrant up dev-php
+```
 
- 
-Usage:
+What's inside:
+---
 
-For use the instance made vagrant up <instance_name>
+Installed software for all instance name:
+
+dev-php
+  - Php 5.6.5
+  - Apache 2.4
+  - Git
+  - Vim
