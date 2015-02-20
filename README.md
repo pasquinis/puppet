@@ -20,8 +20,8 @@ Running:
 
 Now there is only one instance, dev-php
 For use it:
-```
-vagrant up dev-php
+```bash
+$ vagrant up dev-php
 ```
 
 What's inside:
