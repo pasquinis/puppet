@@ -38,6 +38,12 @@ installing hiera:
 ssh-keygen -t rsa -C "art@demo"
 
 
+## 
+
+Phpuni Guidelines
+https://phpunit.de/manual/current/en/installation.html
+
+
 ## TODO LIST
 X - fix version for puppet, hiera , hiera eyaml
 X - PHP 5.6
