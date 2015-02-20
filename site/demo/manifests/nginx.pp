@@ -1,4 +1,4 @@
-class demo::nginx {
+class dojo::nginx {
 
   package { 'apache2':
     ensure => absent

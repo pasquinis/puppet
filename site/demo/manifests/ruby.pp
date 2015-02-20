@@ -1,4 +1,4 @@
-class demo::ruby(
+class dojo::ruby(
   $version
 ) {
 

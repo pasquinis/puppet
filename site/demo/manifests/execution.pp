@@ -1,4 +1,4 @@
-class demo::execution {
+class dojo::execution {
 
   exec { 'I download this file only once':
     cwd     => '/tmp',

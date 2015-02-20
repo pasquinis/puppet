@@ -1,3 +1,3 @@
-class demo::env::dev {
-  include demo::git
+class dojo::env::dev {
+  include dojo::git
 }

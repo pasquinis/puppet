@@ -1,4 +1,4 @@
-class demo::catsite {
+class dojo::catsite {
 
   file { ['/var/www', '/var/www/cat-pictures']:
     ensure => directory
@@ -9,7 +9,7 @@ class demo::catsite {
   } ->
   file { '/etc/nginx/sites-enabled/default':
     ensure => present,
-    source => 'puppet:///modules/demo/cat-pictures.conf',
+    source => 'puppet:///modules/dojo/cat-pictures.conf',
     notify => Service['nginx']
   }
 

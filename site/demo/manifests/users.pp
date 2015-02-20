@@ -1,4 +1,4 @@
-class demo::users {
+class dojo::users {
   user { 'art':
     ensure      => present,
     comment     => 'Art Cart',
@@ -18,7 +18,7 @@ class demo::users {
 
   #file { '/etc/ssh/sshd_config':
   #  ensure => present,
-  #  source => 'puppet:///modules/demo/sshd_config',
+  #  source => 'puppet:///modules/dojo/sshd_config',
   #  notify => Service['ssh']
   #}
 }

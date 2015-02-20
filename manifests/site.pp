@@ -15,4 +15,4 @@ stage { 'apt':
   before => Stage['main']
 }
 
-include demo
+include dojo

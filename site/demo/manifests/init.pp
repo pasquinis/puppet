@@ -1,23 +1,23 @@
-class demo {
+class dojo {
 
-  class { 'demo::ppa':
+  class { 'dojo::ppa':
     stage => ppa
   }
 
-  class { 'demo::apt':
+  class { 'dojo::apt':
     stage => apt
   }
 
   if $::env {
-    include "demo::env::${::env}"
+    include "dojo::env::${::env}"
   }
 
   if $::role {
-    include "demo::role::${::role}"
+    include "dojo::role::${::role}"
   }
 
-  #include demo::nginx
-  #include demo::catsite
-  include demo::users
-  include demo::execution
+  #include dojo::nginx
+  #include dojo::catsite
+  include dojo::users
+  include dojo::execution
 }

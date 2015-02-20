@@ -10,14 +10,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :shell, path: "bin/bootstrap.sh"
   config.vm.synced_folder "./bridge", "/mnt/bridge" , create: 'true'
-  config.vm.synced_folder "./site/demo/templates", "/tmp/puppet/templates" , create: 'true'
-  config.vm.synced_folder "./site/demo/lib/facter", "/var/lib/puppet/lib/facter", create: 'true'
+  config.vm.synced_folder "./site/dojo/templates", "/tmp/puppet/templates" , create: 'true'
+  config.vm.synced_folder "./site/dojo/lib/facter", "/var/lib/puppet/lib/facter", create: 'true'
   config.vm.box_check_update = false
 
   {
     :'dev-php' => {
       :os         => 'ubuntu/precise64',
-      :hostname   => "dev-php.demo.com",
+      :hostname   => "dev-php.dojo.com",
       :ip         => "192.168.33.10",
       :memory     => "4096",
       :cpus       => 2

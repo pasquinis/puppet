@@ -1,5 +1,5 @@
-class demo::ppa {
-  #notify {'demo::ppa run before Stage[apt]': }
+class dojo::ppa {
+  #notify {'dojo::ppa run before Stage[apt]': }
 
   exec { 'execution of add repository for ondrej php5.6':
     command => 'add-apt-repository -y ppa:ondrej/php5-5.6',

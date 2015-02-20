@@ -1,4 +1,4 @@
-class demo::git {
+class dojo::git {
   package { 'git':
     ensure => present
   }
