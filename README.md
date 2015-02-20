@@ -1,8 +1,9 @@
 Vagrant puppet
 ======
 
-My vagrant for made Kata in several languages, now is only PHP and Ruby.
-The first goal was to made a Kata for develop knowledge to puppet provisioner and to have an instance for develop Kata.
+My vagrant is made for  Kata's training in several languages, now is only PHP and Ruby.
+
+The first goal was to make a Kata for enhance my knowledge to Puppet provisioning.
 
 Setup:
 ---
@@ -13,7 +14,7 @@ Requirements:
 
 Plugin needed:
  - vagrant plugin install vagrant-cachier
- 
+
 Running:
 ---
 
