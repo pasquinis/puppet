@@ -30,6 +30,7 @@ What's inside:
 Installed software for all instance name:
 
 dev-php
+  - Ubuntu 14.04
   - Php 5.6.5
   - Apache 2.4
   - Git
