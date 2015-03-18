@@ -19,5 +19,4 @@ class dojo {
   #include dojo::nginx
   #include dojo::catsite
   include dojo::users
-  include dojo::execution
 }
