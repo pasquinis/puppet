@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   {
     :'dev-php' => {
-      :os         => 'ubuntu/precise64',
+      :os         => 'ubuntu/trusty64',
       :hostname   => "dev-php.dojo.com",
       :ip         => "192.168.33.10",
       :memory     => "4096",
