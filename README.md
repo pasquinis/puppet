@@ -1,12 +1,12 @@
-Vagrant puppet
-======
+# Vagrant puppet
+
 
 My vagrant is made for  Kata's training in several languages, now is only PHP and Ruby.
 
 The first goal was to make a Kata for enhance my knowledge to Puppet provisioning.
 
-Setup:
----
+## Setup:
+
 
 Requirements:
  - Vagrant >= 1.6.5
@@ -15,8 +15,8 @@ Requirements:
 Plugin needed:
  - vagrant plugin install vagrant-cachier
 
-Running:
----
+## Running:
+
 
 Now there is only one instance, dev-php
 For use it:
@@ -24,14 +24,17 @@ For use it:
 $ vagrant up dev-php
 ```
 
-What's inside:
----
+## What's inside:
+
 
 Installed software for all instance name:
 
-dev-php
-  - Ubuntu 14.04
-  - Php 5.6.5
-  - Apache 2.4
-  - Git
-  - Vim
+### dev-php:
+ * Ubuntu 14.04
+ * Php 5.6.5
+ * Apache 2.4
+ * Git
+ * Vim
+
+## Stuff used to make this:
+ * [puppet](https://puppetlabs.com/)
