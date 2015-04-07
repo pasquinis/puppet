@@ -4,6 +4,10 @@ class dojo {
     stage => ppa
   }
 
+  class { 'dojo::apt_key':
+    stage => ppa
+  }
+
   class { 'dojo::apt':
     stage => apt
   }

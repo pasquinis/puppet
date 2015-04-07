@@ -11,6 +11,10 @@ stage { 'ppa':
   before => Stage['apt']
 }
 
+stage { 'apt_key':
+  before => Stage['apt']
+}
+
 stage { 'apt':
   before => Stage['main']
 }
