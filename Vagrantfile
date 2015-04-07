@@ -20,7 +20,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       :hostname   => "dev-php.dojo.com",
       :ip         => "192.168.33.10",
       :memory     => "4096",
-      :cpus       => 2
+      :cpus       => 2,
+      :primary    => true,
+    },
+    :'dev-ammp' => {
+     :os         => 'ubuntu/trusty64',
+     :hostname   => "dev-ammp.dojo.com",
+     :ip         => "192.168.33.10",
+     :memory     => "4096",
+     :cpus       => 2,
+     :primary    => false,
     }
   }.each do |instance_name, instance_cfg|
     config.vm.define instance_name do |instance|
