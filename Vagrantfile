@@ -34,12 +34,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       :autostart  => false
     }
   }.each do |instance_name, instance_cfg|
-    config.vm.define instance_name do |instance|
+    config.vm.define instance_name , instance_cfg[:primary], instance_cfg[:autostart] do |instance|
       instance.vm.box = instance_cfg[:os]
       instance.vm.hostname = instance_cfg[:hostname]
       instance.vm.network "private_network", ip: instance_cfg[:ip]
-      instance.vm.primary = instance_cfg[:primary]
-      instance.vm.autostart = instance_cfg[:autostart]
     end
 
     config.vm.provider "virtualbox" do |vb|
