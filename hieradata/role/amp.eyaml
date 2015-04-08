@@ -8,3 +8,9 @@ dojo::role::mongo::list_of_packages:
     ensure: 3.0.1
   mongodb-org-tools:
     ensure: 3.0.1
+
+dojo::role::mongo::kernel_customization:
+  /sys/kernel/mm/transparent_hugepage/enabled:
+    ensure: present
+    content: never
+    notify: Service[mongod]
