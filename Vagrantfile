@@ -24,9 +24,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       :primary    => true,
       :autostart  => true
     },
-    :'dev-ammp' => {
+    :'dev-amp' => {
       :os         => 'ubuntu/trusty64',
-      :hostname   => "dev-ammp.dojo.com",
+      :hostname   => "dev-amp.dojo.com",
       :ip         => "192.168.33.10",
       :memory     => "4096",
       :cpus       => 2,
