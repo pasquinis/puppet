@@ -1,0 +1,10 @@
+---
+dojo::role::mongo::list_of_packages: 
+  mongodb-org:
+    ensure: 3.0.1
+  mongodb-org-server:
+    ensure: 3.0.1
+  mongodb-org-shell:
+    ensure: 3.0.1
+  mongodb-org-tools:
+    ensure: 3.0.1
