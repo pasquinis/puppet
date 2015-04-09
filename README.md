@@ -1,7 +1,10 @@
 Vagrant puppet
 =============
 
-My vagrant is made for  Kata's training in several languages, now is only PHP and Ruby.
+My vagrant is made for  Kata's training in several languages or configurations,now are:
+> **Instances**
+> dev-php
+> dev-amp
 
 The first goal was to make a Kata for enhance my knowledge to Puppet provisioning.
 
