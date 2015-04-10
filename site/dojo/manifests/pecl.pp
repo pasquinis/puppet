@@ -17,7 +17,7 @@ define pecl_install (
   exec { "I want manage ${package_name}":
     command   => $pecl_exec_command,
     unless    => $pecl_exec_unless,
-    require   => Class['dojo::role::php'],
+    require   => Package['php-pear'],
     notify    => Service['apache2'],
   } ->
   file { "I want add ${package_name}.ini for php":
