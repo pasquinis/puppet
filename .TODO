@@ -40,12 +40,16 @@ ssh-keygen -t rsa -C "art@demo"
 
 ## 
 
-Phpuni Guidelines
+Phpunit Guidelines
 https://phpunit.de/manual/current/en/installation.html
+
+## Wordpress
+https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04
 
 
 ## TODO LIST
 X - fix version for puppet, hiera , hiera eyaml
 X - PHP 5.6
 X - change the vagrant instance host name for use role eyaml
-- vb.name is custom, possible problem for multiple instance
+X - vb.name is custom, possible problem for multiple instance
+- Install a dev wordpress instance
