@@ -32,6 +32,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       :cpus       => 2,
       :primary    => false,
       :autostart  => false
+    },
+    :'dev-wp' => {
+      :os         => 'ubuntu/trusty64',
+      :hostname   => "dev-wp.dojo.com",
+      :ip         => "192.168.33.10",
+      :memory     => "4096",
+      :cpus       => 2,
+      :primary    => false,
+      :autostart  => false
     }
   }.each do |instance_name, instance_cfg|
     config.vm.define instance_name ,
