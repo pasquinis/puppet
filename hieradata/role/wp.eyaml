@@ -2,6 +2,9 @@
 dojo::php::list_of_packages:
   php5:
     ensure: "5.6.7+dfsg-1+deb.sury.org~trusty+1"
+  php5-gd:
+    ensure: present
+
 dojo::mysql::version:
   mysql-server-5.6:
     ensure: present
