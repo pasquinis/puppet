@@ -6,6 +6,12 @@ dojo::php::list_of_packages:
     ensure: present
   php5-mysqlnd:
     ensure: present
+  php5-xmlrpc:
+    ensure: present
+  php5-curl:
+    ensure: present
+  php5-fpm:
+    ensure: present
 
 dojo::pecl::list_of_packages:
   php5-dev:
