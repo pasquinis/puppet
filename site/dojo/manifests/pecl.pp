@@ -3,7 +3,9 @@ class dojo::pecl (
   $list_of_pecl,
 ){
   create_resources(package, $list_of_packages)
-  create_resources(pecl_install, $list_of_pecl)
+  if $list_of_pecl {
+    create_resources(pecl_install, $list_of_pecl)
+  }
 }
 
 define pecl_install (
