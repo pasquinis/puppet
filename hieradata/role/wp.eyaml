@@ -21,3 +21,5 @@ dojo::pecl::list_of_pecl:
 dojo::mysql::version:
   mysql-server-5.6:
     ensure: present
+
+dojo::wordpress::version: '4.2.2'

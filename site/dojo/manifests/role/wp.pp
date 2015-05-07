@@ -3,4 +3,5 @@ class dojo::role::wp {
   include dojo::pecl
   include dojo::apache2
   include dojo::mysql
+  include dojo::wordpress
 }
