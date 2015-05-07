@@ -23,3 +23,6 @@ dojo::mysql::version:
     ensure: present
 
 dojo::wordpress::version: '4.2.2'
+dojo::wordpress::database_name: 'wordpressdb'
+dojo::wordpress::username: 'wordpressuser'
+dojo::wordpress::password: 'wordpresspassword'
