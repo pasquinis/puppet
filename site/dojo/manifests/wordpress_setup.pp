@@ -11,6 +11,15 @@ class dojo::wordpress_setup (
     creates => '/var/tmp/latest-wordpress.tar.gz'
   }
 
+  file { 'I prepare mysql_setup.sql for WP MySQL customization':
+    ensure  => present,
+    path    => '/var/tmp/mysql_setup.sql',
+    content => template('dojo/wp/mysql_setup.sql.erb'),
+    notify  => Exec['I apply the mysql_setup.sql']
+  }
 
-    notify { "database_name ${database_name}": } 
+  exec { 'I apply the mysql_setup.sql':
+    command     => 'mysql -u root < /var/tmp/mysql_setup.sql',
+    refreshonly => true
+  }
 }
