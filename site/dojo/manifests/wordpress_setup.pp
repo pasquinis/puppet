@@ -2,7 +2,8 @@ class dojo::wordpress_setup (
   $version,
   $database_name,
   $username,
-  $password
+  $password,
+  $documentroot,
 ){
 
   exec { "I download the wordpress version ${version}":
@@ -21,5 +22,11 @@ class dojo::wordpress_setup (
   exec { 'I apply the mysql_setup.sql':
     command     => 'mysql -u root < /var/tmp/mysql_setup.sql',
     refreshonly => true
+  }
+
+  exec { "I extract wordpress to ${documentroot}":
+    cwd     => '/var/www',
+    command => "mkdir -p /var/www/${documentroot} && tar -xvzf /var/tmp/latest-wordpress.tar.gz -C /var/www/${documentroot} --strip 1",
+    creates => "/var/www/${documentroot}"
   }
 }
