@@ -29,4 +29,6 @@ class dojo::wordpress_setup (
     command => "mkdir -p /var/www/${documentroot} && tar -xvzf /var/tmp/latest-wordpress.tar.gz -C /var/www/${documentroot} --strip 1",
     creates => "/var/www/${documentroot}"
   }
+
+  wordpress_config { 'happy path': }
 }

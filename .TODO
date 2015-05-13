@@ -47,6 +47,11 @@ https://phpunit.de/manual/current/en/installation.html
 https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04
 https://www.howtoforge.com/how-to-install-wordpress-on-ubuntu-14.04-lamp
 
+###
+custom type
+
+https://docs.puppetlabs.com/guides/plugins_in_modules.html
+https://docs.puppetlabs.com/guides/complete_resource_example.html
 
 ## TODO LIST
 X - fix version for puppet, hiera , hiera eyaml
