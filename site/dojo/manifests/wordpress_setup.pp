@@ -30,5 +30,7 @@ class dojo::wordpress_setup (
     creates => "/var/www/${documentroot}"
   }
 
-  wordpress_config { 'happy path': }
+  wordpress_config { "/var/www/${documentroot}/wp-config.php":
+    ensure => present
+  }
 }

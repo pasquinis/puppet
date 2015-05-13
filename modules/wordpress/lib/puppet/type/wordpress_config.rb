@@ -2,8 +2,9 @@ Puppet::Type.newtype(:wordpress_config) do
   @doc = "Manages the setup for WordPress"
   ensurable
 
-  newparam(:name) do
-    desc "The name of resource"
+
+  newparam(:filename, :namevar => true) do
+    desc "The filename for wp-config"
   end
 
   newproperty(:db_name) do
