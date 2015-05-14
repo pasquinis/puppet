@@ -30,7 +30,8 @@ class dojo::wordpress_setup (
     creates => "/var/www/${documentroot}"
   }
 
-  wordpress_config { "/var/www/${documentroot}/wp-config.php":
-    ensure => present
+  wordpress_config { 'I managed wp-config.php':
+    ensure      => present,
+    filename    => "/var/www/${documentroot}/wp-config.php"
   }
 }

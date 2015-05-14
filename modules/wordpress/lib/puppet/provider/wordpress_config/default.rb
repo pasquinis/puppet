@@ -9,7 +9,10 @@ Puppet::Type.type(:wordpress_config).provide(:default) do
   end
 
   def create
-    puts "Create"
+    wp_config_filename = resource[:filename]
+    wp_config_filename_source = wp_config_filename.gsub(/config\./,'config-sample.')
+    FileUtils.cp(wp_config_filename_source, wp_config_filename, :preserve => true )
+
   end
 
   def destroy
@@ -19,4 +22,5 @@ Puppet::Type.type(:wordpress_config).provide(:default) do
   def check_if_contains_correct_value?
     false
   end
+
 end
