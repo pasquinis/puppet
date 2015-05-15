@@ -11,8 +11,13 @@ Puppet::Type.type(:wordpress_config).provide(:default) do
   def create
     wp_config_filename = resource[:filename]
     wp_config_filename_source = wp_config_filename.gsub(/config\./,'config-sample.')
-    FileUtils.cp(wp_config_filename_source, wp_config_filename, :preserve => true )
-
+    fd_read = File.read(wp_config_filename_source)
+    config_db = fd_read.gsub('database_name_here', resource[:db_name])
+    config_user = config_db.gsub('username_here', resource[:db_user])
+    config_last = config_user.gsub('password_here', resource[:db_password])
+    File.open(wp_config_filename, "w") do |file|
+        file.puts config_last
+    end
   end
 
   def destroy

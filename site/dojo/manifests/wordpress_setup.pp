@@ -32,6 +32,9 @@ class dojo::wordpress_setup (
 
   wordpress_config { 'I managed wp-config.php':
     ensure      => present,
-    filename    => "/var/www/${documentroot}/wp-config.php"
+    filename    => "/var/www/${documentroot}/wp-config.php",
+    db_user     => $username,
+    db_password => $password,
+    db_name     => $database_name
   }
 }
