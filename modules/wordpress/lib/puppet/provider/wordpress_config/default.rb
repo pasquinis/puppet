@@ -2,7 +2,7 @@ Puppet::Type.type(:wordpress_config).provide(:default) do
   def exists?
     wp_config_filename = resource[:filename]
     if File.exist?(wp_config_filename)
-        return check_if_contains_correct_value?
+        return check_if_contains_correct_value?(wp_config_filename)
     else
         return false
     end
@@ -24,7 +24,13 @@ Puppet::Type.type(:wordpress_config).provide(:default) do
     puts "Destroy"
   end
 
-  def check_if_contains_correct_value?
+  def check_if_contains_correct_value?(wp_file)
+    p wp_file
+    fd_read = File.read(wp_file)
+    arr_fd = fd_read.split("\n")
+    arr_fd.any? do |voice|
+        p voice.include?(resource[:db_name])
+    end
     false
   end
 
