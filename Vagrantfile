@@ -4,6 +4,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.require_version ">= 1.6.5"
+ENV['VAGRANT_DEFAULT_PROVIDER'] ||= 'docker'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
@@ -37,20 +38,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define instance_name ,
       primary: instance_cfg[:primary],
       autostart: instance_cfg[:autostart] do |instance|
-      instance.vm.box = instance_cfg[:os]
       instance.vm.hostname = instance_cfg[:hostname]
       instance.vm.network "private_network", ip: instance_cfg[:ip]
     end
 
-    config.vm.provider "virtualbox" do |vb|
-      # Don't boot with headless mode
-      vb.gui = false
-
-      # Use VBoxManage to customize the VM. For example to change memory:
-      vb.customize ["modifyvm", :id, "--memory", instance_cfg[:memory]]
-      vb.cpus = instance_cfg[:cpus]
-      # virtualbox parameter CPU execution cap is 50%
-      #vb.customize ["modifyvm", :id, "--cpuexecutioncap", "50"]
+    config.vm.provider 'docker' do |d|
+      d.build_dir = '.'
+      d.name = 'puppet'
+      d.has_ssh = true
     end
   end
 
@@ -63,8 +58,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       '--verbose',
       '--show_diff',
       #'--graph',
-      #'--debug'
+      '--debug'
     ]
   end
-
 end
