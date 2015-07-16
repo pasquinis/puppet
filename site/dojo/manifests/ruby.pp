@@ -1,11 +1,12 @@
 class dojo::ruby(
   $version,
-  $given_key
+  $given_key,
+  $short_given_key
 ) {
 
   exec { 'install RVM gpg':
     command => "/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys ${given_key}",
-    onlyif  => "/usr/bin/test $(gpg --list-keys | grep -c ${given_key}) -eq 0"
+    onlyif  => "/usr/bin/test $(gpg --list-keys | grep -c ${short_given_key}) -eq 0"
   } ->
   exec { 'install RVM with bash':
     cwd     => '/usr/local',

@@ -1,3 +1,4 @@
 ---
 dojo::ruby::version: '2.2.2'
 dojo::ruby::given_key: '409B6B1796C275462A1703113804BB82D39DC0E3'
+dojo::ruby::short_given_key: '4096R'
