@@ -1,8 +1,8 @@
 class dojo::ruby(
-  $version
+  $version,
+  $given_key
 ) {
 
-  $given_key = 'D39DC0E3'
   exec { 'install RVM gpg':
     command => "/usr/bin/gpg --keyserver hkp://keys.gnupg.net --recv-keys ${given_key}",
     onlyif  => "/usr/bin/test $(gpg --list-keys | grep -c ${given_key}) -eq 0"
