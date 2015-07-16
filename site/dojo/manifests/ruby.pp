@@ -16,5 +16,10 @@ class dojo::ruby(
     command => "/usr/local/rvm/bin/rvm install ${version} > /var/tmp/ruby-wrong 2>&1",
     onlyif  => "/usr/bin/test $(rvm list|grep -c ruby-${version}) -eq 0",
     timeout => 1800
+  } ->
+  package { 'install bundler manager':
+    ensure   => present,
+    provider => gem,
+    name     => 'bundler'
   }
 }
