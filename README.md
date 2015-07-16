@@ -5,6 +5,7 @@ My vagrant is made for  Kata's training in several languages or configurations,n
 > **Instances**
 - dev-php
 - dev-amp
+- dev-ruby
 
 The first goal was to make a Kata for enhance my knowledge to Puppet provisioning.
 
@@ -51,6 +52,13 @@ Installed software for all instance name:
  * MongoDB 3.X
  * Git
  * Vim
+ >
+ > dev-ruby:
+ * Ubuntu 14.04
+ * Ruby 2.2.2
+ * Git
+ * Vim
+
 
 ## Stuff used to make this:
  * [puppet](https://puppetlabs.com/)
