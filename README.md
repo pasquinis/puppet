@@ -72,7 +72,7 @@ Installed software for all instance name:
 ```$ git config --global user.name "YOUR NAME"```
 * Tell Git the _email address_ that will be associated with your Git commits.
  
-```git config --global user.email "YOUR EMAIL ADDRESS"```
+```$ git config --global user.email "YOUR EMAIL ADDRESS"```
 
 ### Testing your Git SSH connection
 
