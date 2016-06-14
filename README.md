@@ -63,3 +63,20 @@ Installed software for all instance name:
 ## Stuff used to make this:
  * [puppet](https://puppetlabs.com/)
 
+
+
+### Setting up Git
+
+* Tell Git your _name_ so your commits will be properly labeled. Type everything after the `$` here:
+ 
+```$ git config --global user.name "YOUR NAME"```
+* Tell Git the _email address_ that will be associated with your Git commits.
+ 
+```git config --global user.email "YOUR EMAIL ADDRESS"```
+
+### Testing your Git SSH connection
+
+```bash
+$ ssh -T git@github.com
+Hi pasquinis! You've successfully authenticated, but GitHub does not provide shell access.
+```
